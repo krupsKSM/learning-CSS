@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,body{
+            height: 100%;
+            width: 100%;
+            background-color: #909af1;
+        }
+        
+        #parent{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            /* gap: 20px; */
+            justify-content: space-between;
+            
+            
+
+        }
+        #parent div{
+            height: 200px;
+            width: 200px;
+            
+        }
+        .child-A{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div class="child-A"  id="child1" style="background-color:#535ba0;">1</div>
+        <div class="child-A"  id="child2" style="background-color:#16a480;">2</div>
+        <div class="child-A"  id="child3" style="background-color:#62857c;">3</div>
+        <div class="child-B"  id="child4" style="background-color:#c44ac2;">4</div>
+        <div class="child-B"  id="child5" style="background-color:#511350;">5</div>
+        <!-- <div class="child-B"  id="child6" style="background-color:#04130e;">6</div> -->
+        <!-- <div class="child-C"  id="child7" style="background-color:#799111;">7</div>
+        <div class="child-C"  id="child8" style="background-color:#b6431d;">8</div>
+        <div class="child-C"  id="child9" style="background-color:#b0c20893;">9</div>
+        <div class="child-D"  id="child10" style="background-color:#3f0c18;">10</div>
+        <div class="child-D"  id="child11" style="background-color:#330fe793;">11</div>
+        <div class="child-D"  id="child12" style="background-color:yellowgreen;">12</div>
+        <div class="child"  id="child13" style="background-color:#058b5a;">13</div> -->
+    </div>
+</body>
+</html>
