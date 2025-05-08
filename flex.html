@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flexbox Dashboard</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #333;
+      color: white;
+      padding: 1rem 2rem;
+    }
+
+    /* flex: 3 means the item can grow 3 times more than items with flex: 1.
+     It's a shorthand for flex-grow: 3; flex-shrink: 1; flex-basis: 0%, which controls
+     how flexible the item is in distributing space. */
+    .sidebar {
+      flex: 1;
+      min-width: 200px;
+      background: #f4f4f4;
+      padding: 1rem;
+    }
+
+    .main-content {
+      flex: 3;
+      padding: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      gap: 1rem;
+    }
+
+    .card {
+      flex: 1 1 250px;
+      min-width: 200px;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .dashboard {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      .dashboard {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Flexbox Dashboard</h1>
+    <nav>
+      <a href="#" style="color:white; margin-right:1rem;">Home</a>
+      <a href="#" style="color:white;">Logout</a>
+    </nav>
+  </div>
+
+  <div class="dashboard">
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <p>Navigation links, filters, etc.</p>
+    </div>
+
+    <div class="main-content">
+      <div class="card">📦 Card 1 - This grows and wraps!</div>
+      <div class="card">📦 Card 2 - Resizes with container</div>
+      <div class="card">📦 Card 3 - Responsive</div>
+      <div class="card">📦 Card 4</div>
+      <div class="card">📦 Card 5</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2025 Flexbox Corp</p>
+  </div>
+
+</body>
+</html>
